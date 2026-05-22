@@ -152,6 +152,166 @@ main .range-title {
 /* LCCC GALLERY SUBNAV CENTERING - END */
 </style>
   <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
+<style>
+/* LCCC INDEX GALLERY GRID CLEANUP - START */
+section[aria-label*="Token gallery" i],
+section[aria-label*="gallery" i],
+.image-grid,
+.token-grid {
+  text-align: center;
+}
+
+.token-grid,
+.image-grid {
+  display: grid !important;
+  width: 100% !important;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+
+.token-card,
+.lccc-card,
+.image-card,
+.image-card a,
+.token-card:link,
+.token-card:visited,
+.token-card:hover,
+.token-card:active,
+.lccc-card:link,
+.lccc-card:visited,
+.lccc-card:hover,
+.lccc-card:active,
+.image-card a:link,
+.image-card a:visited,
+.image-card a:hover,
+.image-card a:active,
+.token-card *,
+.lccc-card *,
+.image-card *,
+.token-card *:link,
+.token-card *:visited,
+.token-card *:hover,
+.token-card *:active,
+.lccc-card *:link,
+.lccc-card *:visited,
+.lccc-card *:hover,
+.lccc-card *:active,
+.image-card *:link,
+.image-card *:visited,
+.image-card *:hover,
+.image-card *:active {
+  text-decoration: none !important;
+}
+
+.token-card,
+.lccc-card,
+.image-card,
+.image-card a {
+  color: inherit !important;
+}
+
+.token-title,
+.card-title,
+.work-id {
+  color: #151515 !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 720px) {
+  .token-grid,
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)) !important;
+    gap: 14px !important;
+  }
+}
+/* LCCC INDEX GALLERY GRID CLEANUP - END */
+</style>
+<style>
+/* LCCC INDEX NORMALIZATION - START */
+main.wrap > header,
+section.info-card[aria-label="Archive note"],
+footer {
+  display: none !important;
+}
+
+.range-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.range-card,
+.range-card:link,
+.range-card:visited,
+.range-card:hover,
+.range-card:active,
+.range-card *,
+.range-card *:link,
+.range-card *:visited,
+.range-card *:hover,
+.range-card *:active {
+  text-decoration: none !important;
+}
+
+.range-card {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  color: inherit !important;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.range-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 230px !important;
+  object-fit: cover !important;
+  background: #fff;
+}
+
+.range-card-body {
+  padding: 14px 14px 16px !important;
+  text-align: center !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.range-card-body h2 {
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.05rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em;
+}
+
+section[aria-label="Token range index"] {
+  margin-top: 36px;
+}
+
+section[aria-label="Token range index"] .section-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 720px) {
+  .range-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .range-card img {
+    height: 165px !important;
+  }
+}
+/* LCCC INDEX NORMALIZATION - END */
+</style>
 </head>
 
 <body>
@@ -159,17 +319,11 @@ main .range-title {
 
     <nav class="nav-pills" aria-label="Site navigation">
       <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-nfts/">NFTs &amp; Digital Works</a>
-      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Raisonn&eacute;</a>
+      
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-nfts/light-cult-crypto-club/index.html">Light Cult Crypto Club</a>
+<a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Raisonn&eacute;</a>
     </nav>
-
-    <header>
-      <h1 class="page-title">Light Cult Crypto Club</h1>
-      </header>
-
-    <section class="info-card" aria-label="Archive note">
-      </section>
-
-    <section aria-label="Token range index">
+<section aria-label="Token range index">
       <h2 class="section-title">Token Indexes</h2>
       <div class="range-grid">
         <a class="range-card" href="gallery-8001-8100.html">
@@ -234,12 +388,7 @@ main .range-title {
         </a>
       </div>
     </section>
-
-    <footer>
-      Local manifest: <code>data/light-cult-8001-9000-manifest.csv</code>.
-    </footer>
-
-  </main>
+</main>
 </body>
 </html>
 
